@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_96891aface08f355e33ba45ccf3bb30b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position:fixed;
+    top:12px; left:50%;
+    transform:translateX(-50%);
+    z-index:1000; background:white;
+    padding:10px 22px;
+    border-radius:8px;
+    box-shadow:2px 2px 8px
+    rgba(0,0,0,0.25);
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;">
+    Solar Energy Production Zones
+    — New York State
+</div>
+    <div style="position:fixed;bottom:30px; left:20px;z-index:1000; background:white;padding:12px 18px;border-radius:8px;box-shadow:2px 2px 8pxrgba(0,0,0,0.25);font-family:Arial;font-size:12px;"><b>Zone Legend</b><br><span style="color:#e74c3c;">&#9679;</span> High Production Zone<br><span style="color:#f39c12;">&#9679;</span> Medium Production Zone<br><span style="color:#2ecc71;">&#9679;</span> Low Production Zone<br><span style="color:#3498db;">&#9679;</span> Very Low Production Zone<br><span style="color:#9b59b6;">&#9679;</span> Minimal Production Zone<br></div>
+    
+            <div class="folium-map" id="map_96891aface08f355e33ba45ccf3bb30b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_96891aface08f355e33ba45ccf3bb30b = L.map(
+                "map_96891aface08f355e33ba45ccf3bb30b",
+                {
+                    center: [42.9, -75.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bbddef0fe1c2e6a23bdc5be3b8f51dd3 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bbddef0fe1c2e6a23bdc5be3b8f51dd3.addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+            var circle_marker_dfd627e51e67123647d810b9f2296468 = L.circleMarker(
+                [42.6526, -73.7562],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.0190612, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_de94ce4ae60415eb9c32bed2f4b03636 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_69ac0d97bbd8a5ffc4f1d9c979fe2776 = $(`<div id="html_69ac0d97bbd8a5ffc4f1d9c979fe2776" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Albany<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 115,095,306 kWh<br>                 <b>Total Projects:</b>                 4324<br>                 <b>Avg Storage:</b>                 0.13 kWac             </div></div>`)[0];
+                popup_de94ce4ae60415eb9c32bed2f4b03636.setContent(html_69ac0d97bbd8a5ffc4f1d9c979fe2776);
+            
+        
+
+        circle_marker_dfd627e51e67123647d810b9f2296468.bindPopup(popup_de94ce4ae60415eb9c32bed2f4b03636)
+        ;
+
+        
+    
+    
+            circle_marker_dfd627e51e67123647d810b9f2296468.bindTooltip(
+                `<div>
+                     Albany | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5972e4e4d0ebc5a6b8c1ec3991d97d82 = L.circleMarker(
+                [42.2534, -78.0289],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.2645906, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_394edc9e20dc2d96cb11fe4f6806b6ee = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f79d55413b4b53546e71e21d71e82027 = $(`<div id="html_f79d55413b4b53546e71e21d71e82027" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Allegany<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 76,322,953 kWh<br>                 <b>Total Projects:</b>                 160<br>                 <b>Avg Storage:</b>                 0.08 kWac             </div></div>`)[0];
+                popup_394edc9e20dc2d96cb11fe4f6806b6ee.setContent(html_f79d55413b4b53546e71e21d71e82027);
+            
+        
+
+        circle_marker_5972e4e4d0ebc5a6b8c1ec3991d97d82.bindPopup(popup_394edc9e20dc2d96cb11fe4f6806b6ee)
+        ;
+
+        
+    
+    
+            circle_marker_5972e4e4d0ebc5a6b8c1ec3991d97d82.bindTooltip(
+                `<div>
+                     Allegany | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d2665c8dd799d98303fe79d6a55d502 = L.circleMarker(
+                [40.8448, -73.8648],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.7386954, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_07e07ae170ca90daadd05fb3ad696513 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3460d3dcf25dde11564b27b8780de5f2 = $(`<div id="html_3460d3dcf25dde11564b27b8780de5f2" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Bronx<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 83,693,477 kWh<br>                 <b>Total Projects:</b>                 5932<br>                 <b>Avg Storage:</b>                 0.52 kWac             </div></div>`)[0];
+                popup_07e07ae170ca90daadd05fb3ad696513.setContent(html_3460d3dcf25dde11564b27b8780de5f2);
+            
+        
+
+        circle_marker_0d2665c8dd799d98303fe79d6a55d502.bindPopup(popup_07e07ae170ca90daadd05fb3ad696513)
+        ;
+
+        
+    
+    
+            circle_marker_0d2665c8dd799d98303fe79d6a55d502.bindTooltip(
+                `<div>
+                     Bronx | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a45f8c37aa087868747ab67c0cb8e17d = L.circleMarker(
+                [42.1595, -75.9244],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.8436024, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_cf3e69a6046d1982523ffa3d75b0adf2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_448e9ce17e1da5c7247ae980b3e0a4ca = $(`<div id="html_448e9ce17e1da5c7247ae980b3e0a4ca" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Broome<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 39,218,012 kWh<br>                 <b>Total Projects:</b>                 564<br>                 <b>Avg Storage:</b>                 0.29 kWac             </div></div>`)[0];
+                popup_cf3e69a6046d1982523ffa3d75b0adf2.setContent(html_448e9ce17e1da5c7247ae980b3e0a4ca);
+            
+        
+
+        circle_marker_a45f8c37aa087868747ab67c0cb8e17d.bindPopup(popup_cf3e69a6046d1982523ffa3d75b0adf2)
+        ;
+
+        
+    
+    
+            circle_marker_a45f8c37aa087868747ab67c0cb8e17d.bindTooltip(
+                `<div>
+                     Broome | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73fafb67bbb5518c8d94e5d82cdba835 = L.circleMarker(
+                [42.2488, -78.676],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.6935654, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_192d46dd31654b4b56153fd0e375342b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6f36a90929f4966638b3d917d1897292 = $(`<div id="html_6f36a90929f4966638b3d917d1897292" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Cattaraugus<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 68,467,827 kWh<br>                 <b>Total Projects:</b>                 322<br>                 <b>Avg Storage:</b>                 0.12 kWac             </div></div>`)[0];
+                popup_192d46dd31654b4b56153fd0e375342b.setContent(html_6f36a90929f4966638b3d917d1897292);
+            
+        
+
+        circle_marker_73fafb67bbb5518c8d94e5d82cdba835.bindPopup(popup_192d46dd31654b4b56153fd0e375342b)
+        ;
+
+        
+    
+    
+            circle_marker_73fafb67bbb5518c8d94e5d82cdba835.bindTooltip(
+                `<div>
+                     Cattaraugus | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0dc36507454c8c60e913ebf47bc0a41e = L.circleMarker(
+                [42.9148, -76.5458],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.2956572, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_fcc84519c378b2a2ae1ed1159d6df846 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a02047ba853975d3ae0839386d2a63be = $(`<div id="html_a02047ba853975d3ae0839386d2a63be" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Cayuga<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 51,478,286 kWh<br>                 <b>Total Projects:</b>                 404<br>                 <b>Avg Storage:</b>                 0.08 kWac             </div></div>`)[0];
+                popup_fcc84519c378b2a2ae1ed1159d6df846.setContent(html_a02047ba853975d3ae0839386d2a63be);
+            
+        
+
+        circle_marker_0dc36507454c8c60e913ebf47bc0a41e.bindPopup(popup_fcc84519c378b2a2ae1ed1159d6df846)
+        ;
+
+        
+    
+    
+            circle_marker_0dc36507454c8c60e913ebf47bc0a41e.bindTooltip(
+                `<div>
+                     Cayuga | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9256376f6847493812ee528923a19799 = L.circleMarker(
+                [42.3132, -79.3926],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.0518704, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_0c0444503a5ba16490e80170d3b4e4d7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ad9a0954e0c7eb83b1e714743e86de33 = $(`<div id="html_ad9a0954e0c7eb83b1e714743e86de33" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Chautauqua<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 60,259,352 kWh<br>                 <b>Total Projects:</b>                 461<br>                 <b>Avg Storage:</b>                 1.08 kWac             </div></div>`)[0];
+                popup_0c0444503a5ba16490e80170d3b4e4d7.setContent(html_ad9a0954e0c7eb83b1e714743e86de33);
+            
+        
+
+        circle_marker_9256376f6847493812ee528923a19799.bindPopup(popup_0c0444503a5ba16490e80170d3b4e4d7)
+        ;
+
+        
+    
+    
+            circle_marker_9256376f6847493812ee528923a19799.bindTooltip(
+                `<div>
+                     Chautauqua | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cb518bdaadcf4913e2c3e580a427994a = L.circleMarker(
+                [42.1459, -76.7997],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.7089766, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_1b05b1bbe588b784f109679b9c4dd358 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_304d071fddec897c5ff24c64fb378393 = $(`<div id="html_304d071fddec897c5ff24c64fb378393" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Chemung<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 58,544,883 kWh<br>                 <b>Total Projects:</b>                 254<br>                 <b>Avg Storage:</b>                 0.08 kWac             </div></div>`)[0];
+                popup_1b05b1bbe588b784f109679b9c4dd358.setContent(html_304d071fddec897c5ff24c64fb378393);
+            
+        
+
+        circle_marker_cb518bdaadcf4913e2c3e580a427994a.bindPopup(popup_1b05b1bbe588b784f109679b9c4dd358)
+        ;
+
+        
+    
+    
+            circle_marker_cb518bdaadcf4913e2c3e580a427994a.bindTooltip(
+                `<div>
+                     Chemung | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b271af61fa7fb5ab83b8a824e2189126 = L.circleMarker(
+                [42.4934, -75.6068],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.1235458, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_4330a0564e31172d72b9a0bf9eaef685 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4b5ef6bed185ee325ea0748402c4bf11 = $(`<div id="html_4b5ef6bed185ee325ea0748402c4bf11" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Chenango<br>                 <b>Zone:</b> Medium Production Zone<br>                 <b>Total Energy:</b>                 45,617,729 kWh<br>                 <b>Total Projects:</b>                 204<br>                 <b>Avg Storage:</b>                 21.15 kWac             </div></div>`)[0];
+                popup_4330a0564e31172d72b9a0bf9eaef685.setContent(html_4b5ef6bed185ee325ea0748402c4bf11);
+            
+        
+
+        circle_marker_b271af61fa7fb5ab83b8a824e2189126.bindPopup(popup_4330a0564e31172d72b9a0bf9eaef685)
+        ;
+
+        
+    
+    
+            circle_marker_b271af61fa7fb5ab83b8a824e2189126.bindTooltip(
+                `<div>
+                     Chenango | Medium Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5662c035ae7e3fb42e3e6593a0694b3d = L.circleMarker(
+                [44.745, -73.6796],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7879158, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_91acf54181c387bc32f48465f0c4081b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_69c09229877ae5ee21414bbd46155b90 = $(`<div id="html_69c09229877ae5ee21414bbd46155b90" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Clinton<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 38,939,579 kWh<br>                 <b>Total Projects:</b>                 309<br>                 <b>Avg Storage:</b>                 0.08 kWac             </div></div>`)[0];
+                popup_91acf54181c387bc32f48465f0c4081b.setContent(html_69c09229877ae5ee21414bbd46155b90);
+            
+        
+
+        circle_marker_5662c035ae7e3fb42e3e6593a0694b3d.bindPopup(popup_91acf54181c387bc32f48465f0c4081b)
+        ;
+
+        
+    
+    
+            circle_marker_5662c035ae7e3fb42e3e6593a0694b3d.bindTooltip(
+                `<div>
+                     Clinton | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_991760785dadf0766dc4e3631088d1ec = L.circleMarker(
+                [42.247, -73.6323],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.3801088, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_309512f46f8d39893cbcb3023ab0dbe4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b6c56006112186d5666ef5953c4e4f45 = $(`<div id="html_b6c56006112186d5666ef5953c4e4f45" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Columbia<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 91,900,544 kWh<br>                 <b>Total Projects:</b>                 1476<br>                 <b>Avg Storage:</b>                 0.58 kWac             </div></div>`)[0];
+                popup_309512f46f8d39893cbcb3023ab0dbe4.setContent(html_b6c56006112186d5666ef5953c4e4f45);
+            
+        
+
+        circle_marker_991760785dadf0766dc4e3631088d1ec.bindPopup(popup_309512f46f8d39893cbcb3023ab0dbe4)
+        ;
+
+        
+    
+    
+            circle_marker_991760785dadf0766dc4e3631088d1ec.bindTooltip(
+                `<div>
+                     Columbia | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5bc921b4e041be9829cc254c64700ba6 = L.circleMarker(
+                [42.5961, -76.0638],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.3362494, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_edaebbca6e05eef47cc8296b7a1828f5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_84b5eb98334c47169c6f7586c6552400 = $(`<div id="html_84b5eb98334c47169c6f7586c6552400" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Cortland<br>                 <b>Zone:</b> Medium Production Zone<br>                 <b>Total Energy:</b>                 86,681,247 kWh<br>                 <b>Total Projects:</b>                 299<br>                 <b>Avg Storage:</b>                 6.77 kWac             </div></div>`)[0];
+                popup_edaebbca6e05eef47cc8296b7a1828f5.setContent(html_84b5eb98334c47169c6f7586c6552400);
+            
+        
+
+        circle_marker_5bc921b4e041be9829cc254c64700ba6.bindPopup(popup_edaebbca6e05eef47cc8296b7a1828f5)
+        ;
+
+        
+    
+    
+            circle_marker_5bc921b4e041be9829cc254c64700ba6.bindTooltip(
+                `<div>
+                     Cortland | Medium Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb76fd861190f2a064dbaf4ff7d9215c = L.circleMarker(
+                [42.2001, -74.9697],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_d2b4387d93fa296045675761af4d91af = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_23929ed7750ed1b2350af650cc255373 = $(`<div id="html_23929ed7750ed1b2350af650cc255373" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Delaware<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 15,998,926 kWh<br>                 <b>Total Projects:</b>                 256<br>                 <b>Avg Storage:</b>                 0.59 kWac             </div></div>`)[0];
+                popup_d2b4387d93fa296045675761af4d91af.setContent(html_23929ed7750ed1b2350af650cc255373);
+            
+        
+
+        circle_marker_bb76fd861190f2a064dbaf4ff7d9215c.bindPopup(popup_d2b4387d93fa296045675761af4d91af)
+        ;
+
+        
+    
+    
+            circle_marker_bb76fd861190f2a064dbaf4ff7d9215c.bindTooltip(
+                `<div>
+                     Delaware | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0af12bff6d87c88044c2e704719eb300 = L.circleMarker(
+                [41.7784, -73.7457],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_91941ab13e929032322eeca9bae1447d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_dc72a26a820e3b5e94a857d336c6fac4 = $(`<div id="html_dc72a26a820e3b5e94a857d336c6fac4" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Dutchess<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 148,401,012 kWh<br>                 <b>Total Projects:</b>                 6099<br>                 <b>Avg Storage:</b>                 0.60 kWac             </div></div>`)[0];
+                popup_91941ab13e929032322eeca9bae1447d.setContent(html_dc72a26a820e3b5e94a857d336c6fac4);
+            
+        
+
+        circle_marker_0af12bff6d87c88044c2e704719eb300.bindPopup(popup_91941ab13e929032322eeca9bae1447d)
+        ;
+
+        
+    
+    
+            circle_marker_0af12bff6d87c88044c2e704719eb300.bindTooltip(
+                `<div>
+                     Dutchess | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc96647e32f4e754e7e876fff451076e = L.circleMarker(
+                [42.758, -78.8389],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_876560d112883d0a8fa81a6ff0213e78 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ff44499ccfec42ca015b2b4f5c711af7 = $(`<div id="html_ff44499ccfec42ca015b2b4f5c711af7" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Erie<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 193,526,735 kWh<br>                 <b>Total Projects:</b>                 3674<br>                 <b>Avg Storage:</b>                 0.09 kWac             </div></div>`)[0];
+                popup_876560d112883d0a8fa81a6ff0213e78.setContent(html_ff44499ccfec42ca015b2b4f5c711af7);
+            
+        
+
+        circle_marker_dc96647e32f4e754e7e876fff451076e.bindPopup(popup_876560d112883d0a8fa81a6ff0213e78)
+        ;
+
+        
+    
+    
+            circle_marker_dc96647e32f4e754e7e876fff451076e.bindTooltip(
+                `<div>
+                     Erie | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_03a23f36d8389fc5dfe0fe9d7775a360 = L.circleMarker(
+                [44.1151, -73.7548],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_dcade693d0f2faefcece6466564e2b51 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5ec6a1c18400d15544d5e85012e66328 = $(`<div id="html_5ec6a1c18400d15544d5e85012e66328" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Essex<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 5,250,306 kWh<br>                 <b>Total Projects:</b>                 411<br>                 <b>Avg Storage:</b>                 0.38 kWac             </div></div>`)[0];
+                popup_dcade693d0f2faefcece6466564e2b51.setContent(html_5ec6a1c18400d15544d5e85012e66328);
+            
+        
+
+        circle_marker_03a23f36d8389fc5dfe0fe9d7775a360.bindPopup(popup_dcade693d0f2faefcece6466564e2b51)
+        ;
+
+        
+    
+    
+            circle_marker_03a23f36d8389fc5dfe0fe9d7775a360.bindTooltip(
+                `<div>
+                     Essex | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39193f67ea3f8c487bdb2c9b21d60dcb = L.circleMarker(
+                [44.5989, -74.3025],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.4162034, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_f4fe22bf12363b88c7ce2cf2ae0f7680 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_74e392604c2e149f049d9a45a4ed2c05 = $(`<div id="html_74e392604c2e149f049d9a45a4ed2c05" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Franklin<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 32,081,017 kWh<br>                 <b>Total Projects:</b>                 220<br>                 <b>Avg Storage:</b>                 0.28 kWac             </div></div>`)[0];
+                popup_f4fe22bf12363b88c7ce2cf2ae0f7680.setContent(html_74e392604c2e149f049d9a45a4ed2c05);
+            
+        
+
+        circle_marker_39193f67ea3f8c487bdb2c9b21d60dcb.bindPopup(popup_f4fe22bf12363b88c7ce2cf2ae0f7680)
+        ;
+
+        
+    
+    
+            circle_marker_39193f67ea3f8c487bdb2c9b21d60dcb.bindTooltip(
+                `<div>
+                     Franklin | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fce41bf7a81fbbe39383a663dbcce060 = L.circleMarker(
+                [43.1245, -74.419],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.9614586, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_0f29b8d9e7b5fa3c90178834c84229a9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9a3763c8d60dfd46b1b471263d721f3f = $(`<div id="html_9a3763c8d60dfd46b1b471263d721f3f" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Fulton<br>                 <b>Zone:</b> Medium Production Zone<br>                 <b>Total Energy:</b>                 94,807,293 kWh<br>                 <b>Total Projects:</b>                 575<br>                 <b>Avg Storage:</b>                 6.18 kWac             </div></div>`)[0];
+                popup_0f29b8d9e7b5fa3c90178834c84229a9.setContent(html_9a3763c8d60dfd46b1b471263d721f3f);
+            
+        
+
+        circle_marker_fce41bf7a81fbbe39383a663dbcce060.bindPopup(popup_0f29b8d9e7b5fa3c90178834c84229a9)
+        ;
+
+        
+    
+    
+            circle_marker_fce41bf7a81fbbe39383a663dbcce060.bindTooltip(
+                `<div>
+                     Fulton | Medium Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d01cd8234080b73d1d019bb3132d13e = L.circleMarker(
+                [42.9926, -78.1964],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.369463, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_ad6aca8bfbbb770b0dce7169a1ff42d1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a39bde9f871c6bd2b85e8fab34ad289d = $(`<div id="html_a39bde9f871c6bd2b85e8fab34ad289d" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Genesee<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 46,847,315 kWh<br>                 <b>Total Projects:</b>                 305<br>                 <b>Avg Storage:</b>                 0.12 kWac             </div></div>`)[0];
+                popup_ad6aca8bfbbb770b0dce7169a1ff42d1.setContent(html_a39bde9f871c6bd2b85e8fab34ad289d);
+            
+        
+
+        circle_marker_6d01cd8234080b73d1d019bb3132d13e.bindPopup(popup_ad6aca8bfbbb770b0dce7169a1ff42d1)
+        ;
+
+        
+    
+    
+            circle_marker_6d01cd8234080b73d1d019bb3132d13e.bindTooltip(
+                `<div>
+                     Genesee | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e04c9a372008ad06c784ac4586498230 = L.circleMarker(
+                [42.2754, -74.1785],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.1409136, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_85a154aaa460f04a74b486861c5b9b9e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4cb3a2c93e8ba0bb6711467d533e14bd = $(`<div id="html_4cb3a2c93e8ba0bb6711467d533e14bd" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Greene<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 70,704,568 kWh<br>                 <b>Total Projects:</b>                 1070<br>                 <b>Avg Storage:</b>                 0.44 kWac             </div></div>`)[0];
+                popup_85a154aaa460f04a74b486861c5b9b9e.setContent(html_4cb3a2c93e8ba0bb6711467d533e14bd);
+            
+        
+
+        circle_marker_e04c9a372008ad06c784ac4586498230.bindPopup(popup_85a154aaa460f04a74b486861c5b9b9e)
+        ;
+
+        
+    
+    
+            circle_marker_e04c9a372008ad06c784ac4586498230.bindTooltip(
+                `<div>
+                     Greene | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_84353d145d6bd2fc2594678da5bf0252 = L.circleMarker(
+                [43.668, -74.5228],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_e26b2450d733ab6464d6da31f55fdf05 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6c29ff2259ded7a75b8dac6ace055e31 = $(`<div id="html_6c29ff2259ded7a75b8dac6ace055e31" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Hamilton<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 461,196 kWh<br>                 <b>Total Projects:</b>                 44<br>                 <b>Avg Storage:</b>                 0.18 kWac             </div></div>`)[0];
+                popup_e26b2450d733ab6464d6da31f55fdf05.setContent(html_6c29ff2259ded7a75b8dac6ace055e31);
+            
+        
+
+        circle_marker_84353d145d6bd2fc2594678da5bf0252.bindPopup(popup_e26b2450d733ab6464d6da31f55fdf05)
+        ;
+
+        
+    
+    
+            circle_marker_84353d145d6bd2fc2594678da5bf0252.bindTooltip(
+                `<div>
+                     Hamilton | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05ead779fa86b5a268d02712d39e3c90 = L.circleMarker(
+                [43.4313, -74.9659],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_c5766cb98f83a249da1c141ef140be83 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f026cb3d4fe51515e5589b72f0c5addf = $(`<div id="html_f026cb3d4fe51515e5589b72f0c5addf" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Herkimer<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 18,183,446 kWh<br>                 <b>Total Projects:</b>                 230<br>                 <b>Avg Storage:</b>                 0.03 kWac             </div></div>`)[0];
+                popup_c5766cb98f83a249da1c141ef140be83.setContent(html_f026cb3d4fe51515e5589b72f0c5addf);
+            
+        
+
+        circle_marker_05ead779fa86b5a268d02712d39e3c90.bindPopup(popup_c5766cb98f83a249da1c141ef140be83)
+        ;
+
+        
+    
+    
+            circle_marker_05ead779fa86b5a268d02712d39e3c90.bindTooltip(
+                `<div>
+                     Herkimer | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_571e887eb77af5bda3cfa398d6ee01a1 = L.circleMarker(
+                [44.0128, -75.9741],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_23c8fb1c023545877bb394762d80e688 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5b1a7a97f5113b29e5f5b46c4bd93baa = $(`<div id="html_5b1a7a97f5113b29e5f5b46c4bd93baa" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Jefferson<br>                 <b>Zone:</b> Medium Production Zone<br>                 <b>Total Energy:</b>                 150,122,216 kWh<br>                 <b>Total Projects:</b>                 495<br>                 <b>Avg Storage:</b>                 46.87 kWac             </div></div>`)[0];
+                popup_23c8fb1c023545877bb394762d80e688.setContent(html_5b1a7a97f5113b29e5f5b46c4bd93baa);
+            
+        
+
+        circle_marker_571e887eb77af5bda3cfa398d6ee01a1.bindPopup(popup_23c8fb1c023545877bb394762d80e688)
+        ;
+
+        
+    
+    
+            circle_marker_571e887eb77af5bda3cfa398d6ee01a1.bindTooltip(
+                `<div>
+                     Jefferson | Medium Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1928f1b5ee8af4966f650ad2790c04a4 = L.circleMarker(
+                [40.6501, -73.9496],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.167711, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_f0e51e821e8d1fd7d39d966ebedb69b2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_748a7d2cd980fbaa46e607010071f915 = $(`<div id="html_748a7d2cd980fbaa46e607010071f915" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Kings<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 120,838,555 kWh<br>                 <b>Total Projects:</b>                 11946<br>                 <b>Avg Storage:</b>                 0.01 kWac             </div></div>`)[0];
+                popup_f0e51e821e8d1fd7d39d966ebedb69b2.setContent(html_748a7d2cd980fbaa46e607010071f915);
+            
+        
+
+        circle_marker_1928f1b5ee8af4966f650ad2790c04a4.bindPopup(popup_f0e51e821e8d1fd7d39d966ebedb69b2)
+        ;
+
+        
+    
+    
+            circle_marker_1928f1b5ee8af4966f650ad2790c04a4.bindTooltip(
+                `<div>
+                     Kings | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5f4cde94dd0814e99a3608cd1f380e2 = L.circleMarker(
+                [43.7815, -75.4533],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.4729266, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_9b029242deba79b163de3e34cf260e80 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7f9cae6c17dbc55d7701d74108f827bd = $(`<div id="html_7f9cae6c17dbc55d7701d74108f827bd" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Lewis<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 62,364,633 kWh<br>                 <b>Total Projects:</b>                 100<br>                 <b>Avg Storage:</b>                 0.59 kWac             </div></div>`)[0];
+                popup_9b029242deba79b163de3e34cf260e80.setContent(html_7f9cae6c17dbc55d7701d74108f827bd);
+            
+        
+
+        circle_marker_e5f4cde94dd0814e99a3608cd1f380e2.bindPopup(popup_9b029242deba79b163de3e34cf260e80)
+        ;
+
+        
+    
+    
+            circle_marker_e5f4cde94dd0814e99a3608cd1f380e2.bindTooltip(
+                `<div>
+                     Lewis | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e48ae5f096d317a1ca19d75ffa6c6f61 = L.circleMarker(
+                [42.6213, -77.7832],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.687292, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_087c02e289d27cacd5d806c56659a930 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_aefce79269715573a51f62e9dc9b87eb = $(`<div id="html_aefce79269715573a51f62e9dc9b87eb" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Livingston<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 83,436,460 kWh<br>                 <b>Total Projects:</b>                 409<br>                 <b>Avg Storage:</b>                 0.10 kWac             </div></div>`)[0];
+                popup_087c02e289d27cacd5d806c56659a930.setContent(html_aefce79269715573a51f62e9dc9b87eb);
+            
+        
+
+        circle_marker_e48ae5f096d317a1ca19d75ffa6c6f61.bindPopup(popup_087c02e289d27cacd5d806c56659a930)
+        ;
+
+        
+    
+    
+            circle_marker_e48ae5f096d317a1ca19d75ffa6c6f61.bindTooltip(
+                `<div>
+                     Livingston | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7386d55745b11401ea0820490c21347 = L.circleMarker(
+                [42.9079, -75.6682],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.5239312, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_4dc9731a4974109aacce548eaae6014a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3ef3da0cd1bf20bae0604d880309d7ab = $(`<div id="html_3ef3da0cd1bf20bae0604d880309d7ab" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Madison<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 67,619,656 kWh<br>                 <b>Total Projects:</b>                 453<br>                 <b>Avg Storage:</b>                 0.08 kWac             </div></div>`)[0];
+                popup_4dc9731a4974109aacce548eaae6014a.setContent(html_3ef3da0cd1bf20bae0604d880309d7ab);
+            
+        
+
+        circle_marker_a7386d55745b11401ea0820490c21347.bindPopup(popup_4dc9731a4974109aacce548eaae6014a)
+        ;
+
+        
+    
+    
+            circle_marker_a7386d55745b11401ea0820490c21347.bindTooltip(
+                `<div>
+                     Madison | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_292472925bdc5a3c9a7b594f6252a233 = L.circleMarker(
+                [43.1548, -77.5823],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_0e71a91a21ad9c22d01c26dee648df42 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_146ec553bc5e0ac7118e29c36cee4b73 = $(`<div id="html_146ec553bc5e0ac7118e29c36cee4b73" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Monroe<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 235,727,354 kWh<br>                 <b>Total Projects:</b>                 2182<br>                 <b>Avg Storage:</b>                 2.23 kWac             </div></div>`)[0];
+                popup_0e71a91a21ad9c22d01c26dee648df42.setContent(html_146ec553bc5e0ac7118e29c36cee4b73);
+            
+        
+
+        circle_marker_292472925bdc5a3c9a7b594f6252a233.bindPopup(popup_0e71a91a21ad9c22d01c26dee648df42)
+        ;
+
+        
+    
+    
+            circle_marker_292472925bdc5a3c9a7b594f6252a233.bindTooltip(
+                `<div>
+                     Monroe | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95e4bf31a867c23e452e705aefe54c97 = L.circleMarker(
+                [42.9021, -74.4413],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.9011324, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_5663c0c037943a196efeba582c9a0ef4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_460023e80ce839acbf5f9941bb2ee2fd = $(`<div id="html_460023e80ce839acbf5f9941bb2ee2fd" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Montgomery<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 69,505,662 kWh<br>                 <b>Total Projects:</b>                 699<br>                 <b>Avg Storage:</b>                 0.10 kWac             </div></div>`)[0];
+                popup_5663c0c037943a196efeba582c9a0ef4.setContent(html_460023e80ce839acbf5f9941bb2ee2fd);
+            
+        
+
+        circle_marker_95e4bf31a867c23e452e705aefe54c97.bindPopup(popup_5663c0c037943a196efeba582c9a0ef4)
+        ;
+
+        
+    
+    
+            circle_marker_95e4bf31a867c23e452e705aefe54c97.bindTooltip(
+                `<div>
+                     Montgomery | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eec055d4beb3b077988ac8106c6c7eab = L.circleMarker(
+                [40.7282, -73.5975],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_b884e2fe144bd5ee6ffda9bed5140c45 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e1e259ae94a80df5af92c9f38d79966a = $(`<div id="html_e1e259ae94a80df5af92c9f38d79966a" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Nassau<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 354,606,971 kWh<br>                 <b>Total Projects:</b>                 32233<br>                 <b>Avg Storage:</b>                 0.25 kWac             </div></div>`)[0];
+                popup_b884e2fe144bd5ee6ffda9bed5140c45.setContent(html_e1e259ae94a80df5af92c9f38d79966a);
+            
+        
+
+        circle_marker_eec055d4beb3b077988ac8106c6c7eab.bindPopup(popup_b884e2fe144bd5ee6ffda9bed5140c45)
+        ;
+
+        
+    
+    
+            circle_marker_eec055d4beb3b077988ac8106c6c7eab.bindTooltip(
+                `<div>
+                     Nassau | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fbb86799ecb81fee61f0690588819a4c = L.circleMarker(
+                [40.7831, -73.9712],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_2e136008933a76e4ba01aa47d8840b86 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_12f28c60e7d2846e191c70e3fbfe0d6b = $(`<div id="html_12f28c60e7d2846e191c70e3fbfe0d6b" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 New York<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 15,202,525 kWh<br>                 <b>Total Projects:</b>                 434<br>                 <b>Avg Storage:</b>                 0.00 kWac             </div></div>`)[0];
+                popup_2e136008933a76e4ba01aa47d8840b86.setContent(html_12f28c60e7d2846e191c70e3fbfe0d6b);
+            
+        
+
+        circle_marker_fbb86799ecb81fee61f0690588819a4c.bindPopup(popup_2e136008933a76e4ba01aa47d8840b86)
+        ;
+
+        
+    
+    
+            circle_marker_fbb86799ecb81fee61f0690588819a4c.bindTooltip(
+                `<div>
+                     New York | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_00f414bf53cc5778add625d1b607669e = L.circleMarker(
+                [43.2951, -78.9679],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.4500516, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_b72f51437249944b06a33af980969424 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2cce8971339794e0e71a181b6ce1afba = $(`<div id="html_2cce8971339794e0e71a181b6ce1afba" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Niagara<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 67,250,258 kWh<br>                 <b>Total Projects:</b>                 856<br>                 <b>Avg Storage:</b>                 0.11 kWac             </div></div>`)[0];
+                popup_b72f51437249944b06a33af980969424.setContent(html_2cce8971339794e0e71a181b6ce1afba);
+            
+        
+
+        circle_marker_00f414bf53cc5778add625d1b607669e.bindPopup(popup_b72f51437249944b06a33af980969424)
+        ;
+
+        
+    
+    
+            circle_marker_00f414bf53cc5778add625d1b607669e.bindTooltip(
+                `<div>
+                     Niagara | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4349b5fe74cdccbfe6c24f2166525f6 = L.circleMarker(
+                [43.2446, -75.4554],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.9832628, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_cfc3ad6ba348d5cfdecee7bff44dbb0c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e24343767af146bd2202fecdb59686ff = $(`<div id="html_e24343767af146bd2202fecdb59686ff" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Oneida<br>                 <b>Zone:</b> Medium Production Zone<br>                 <b>Total Energy:</b>                 124,916,314 kWh<br>                 <b>Total Projects:</b>                 896<br>                 <b>Avg Storage:</b>                 5.96 kWac             </div></div>`)[0];
+                popup_cfc3ad6ba348d5cfdecee7bff44dbb0c.setContent(html_e24343767af146bd2202fecdb59686ff);
+            
+        
+
+        circle_marker_e4349b5fe74cdccbfe6c24f2166525f6.bindPopup(popup_cfc3ad6ba348d5cfdecee7bff44dbb0c)
+        ;
+
+        
+    
+    
+            circle_marker_e4349b5fe74cdccbfe6c24f2166525f6.bindTooltip(
+                `<div>
+                     Oneida | Medium Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4639b1b553de8208a8a8167e1a50116a = L.circleMarker(
+                [43.0482, -76.1474],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_9ccf058e0189d3231f33a67046c9bd08 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c6f7ae56ade6a0a3af3f5c91506b7e8f = $(`<div id="html_c6f7ae56ade6a0a3af3f5c91506b7e8f" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Onondaga<br>                 <b>Zone:</b> Medium Production Zone<br>                 <b>Total Energy:</b>                 147,883,115 kWh<br>                 <b>Total Projects:</b>                 1575<br>                 <b>Avg Storage:</b>                 6.43 kWac             </div></div>`)[0];
+                popup_9ccf058e0189d3231f33a67046c9bd08.setContent(html_c6f7ae56ade6a0a3af3f5c91506b7e8f);
+            
+        
+
+        circle_marker_4639b1b553de8208a8a8167e1a50116a.bindPopup(popup_9ccf058e0189d3231f33a67046c9bd08)
+        ;
+
+        
+    
+    
+            circle_marker_4639b1b553de8208a8a8167e1a50116a.bindTooltip(
+                `<div>
+                     Onondaga | Medium Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7f6ce01fc9ded698bfd7b79ad05db1a0 = L.circleMarker(
+                [42.8579, -77.2956],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.1614912, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_e5f8e7cd8d3cd100d9a0e298cf5fd232 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_622cdd1d4b0af93b34427db6e48b14c9 = $(`<div id="html_622cdd1d4b0af93b34427db6e48b14c9" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Ontario<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 65,807,456 kWh<br>                 <b>Total Projects:</b>                 773<br>                 <b>Avg Storage:</b>                 0.31 kWac             </div></div>`)[0];
+                popup_e5f8e7cd8d3cd100d9a0e298cf5fd232.setContent(html_622cdd1d4b0af93b34427db6e48b14c9);
+            
+        
+
+        circle_marker_7f6ce01fc9ded698bfd7b79ad05db1a0.bindPopup(popup_e5f8e7cd8d3cd100d9a0e298cf5fd232)
+        ;
+
+        
+    
+    
+            circle_marker_7f6ce01fc9ded698bfd7b79ad05db1a0.bindTooltip(
+                `<div>
+                     Ontario | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44fe539c46d39c1f45885d117906a29a = L.circleMarker(
+                [41.3908, -74.3118],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_4440fde4dad18368bfcb116635ea2f37 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_13bb1274209acab1652762f7e0fe77ed = $(`<div id="html_13bb1274209acab1652762f7e0fe77ed" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Orange<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 339,330,818 kWh<br>                 <b>Total Projects:</b>                 9359<br>                 <b>Avg Storage:</b>                 0.75 kWac             </div></div>`)[0];
+                popup_4440fde4dad18368bfcb116635ea2f37.setContent(html_13bb1274209acab1652762f7e0fe77ed);
+            
+        
+
+        circle_marker_44fe539c46d39c1f45885d117906a29a.bindPopup(popup_4440fde4dad18368bfcb116635ea2f37)
+        ;
+
+        
+    
+    
+            circle_marker_44fe539c46d39c1f45885d117906a29a.bindTooltip(
+                `<div>
+                     Orange | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_32f47642878b9143d233d43ddadd8c26 = L.circleMarker(
+                [43.2395, -78.1822],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_78473488c7efc8b9a7af11cb69bb0462 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e487e06d01235e79449772f27ca72844 = $(`<div id="html_e487e06d01235e79449772f27ca72844" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Orleans<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 24,166,130 kWh<br>                 <b>Total Projects:</b>                 246<br>                 <b>Avg Storage:</b>                 0.12 kWac             </div></div>`)[0];
+                popup_78473488c7efc8b9a7af11cb69bb0462.setContent(html_e487e06d01235e79449772f27ca72844);
+            
+        
+
+        circle_marker_32f47642878b9143d233d43ddadd8c26.bindPopup(popup_78473488c7efc8b9a7af11cb69bb0462)
+        ;
+
+        
+    
+    
+            circle_marker_32f47642878b9143d233d43ddadd8c26.bindTooltip(
+                `<div>
+                     Orleans | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2e1be5fecd0bfe43e5c8dc10eb3ef2f = L.circleMarker(
+                [43.4646, -76.2085],
+                {"bubblingMouseEvents": true, "color": "#f39c12", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.098614, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_b2e2706ad7aeabbf91444b6a6795d714 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_19dde012212e38db04692e4734b75bde = $(`<div id="html_19dde012212e38db04692e4734b75bde" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Oswego<br>                 <b>Zone:</b> Medium Production Zone<br>                 <b>Total Energy:</b>                 75,493,070 kWh<br>                 <b>Total Projects:</b>                 560<br>                 <b>Avg Storage:</b>                 9.32 kWac             </div></div>`)[0];
+                popup_b2e2706ad7aeabbf91444b6a6795d714.setContent(html_19dde012212e38db04692e4734b75bde);
+            
+        
+
+        circle_marker_d2e1be5fecd0bfe43e5c8dc10eb3ef2f.bindPopup(popup_b2e2706ad7aeabbf91444b6a6795d714)
+        ;
+
+        
+    
+    
+            circle_marker_d2e1be5fecd0bfe43e5c8dc10eb3ef2f.bindTooltip(
+                `<div>
+                     Oswego | Medium Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e1ef9ba410765de7590b10df289edd0 = L.circleMarker(
+                [42.6351, -74.9847],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_bc88b31e10ba4bc1d5b17b67c50fbc0e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_64b695858362f0d8d9bf54544de39adc = $(`<div id="html_64b695858362f0d8d9bf54544de39adc" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Otsego<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 9,697,301 kWh<br>                 <b>Total Projects:</b>                 411<br>                 <b>Avg Storage:</b>                 0.22 kWac             </div></div>`)[0];
+                popup_bc88b31e10ba4bc1d5b17b67c50fbc0e.setContent(html_64b695858362f0d8d9bf54544de39adc);
+            
+        
+
+        circle_marker_1e1ef9ba410765de7590b10df289edd0.bindPopup(popup_bc88b31e10ba4bc1d5b17b67c50fbc0e)
+        ;
+
+        
+    
+    
+            circle_marker_1e1ef9ba410765de7590b10df289edd0.bindTooltip(
+                `<div>
+                     Otsego | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_65b3072f1bb960cdc8daa5e73f5ae554 = L.circleMarker(
+                [41.4351, -73.7948],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_3d5c951b8ca17f478aca93e205542e6d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4cc9240b9658c4ac139879ebc33d9cae = $(`<div id="html_4cc9240b9658c4ac139879ebc33d9cae" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Putnam<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 21,057,794 kWh<br>                 <b>Total Projects:</b>                 1041<br>                 <b>Avg Storage:</b>                 0.60 kWac             </div></div>`)[0];
+                popup_3d5c951b8ca17f478aca93e205542e6d.setContent(html_4cc9240b9658c4ac139879ebc33d9cae);
+            
+        
+
+        circle_marker_65b3072f1bb960cdc8daa5e73f5ae554.bindPopup(popup_3d5c951b8ca17f478aca93e205542e6d)
+        ;
+
+        
+    
+    
+            circle_marker_65b3072f1bb960cdc8daa5e73f5ae554.bindTooltip(
+                `<div>
+                     Putnam | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b10f61712803911cbe6a94e10143f788 = L.circleMarker(
+                [40.7282, -73.7949],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_15e217d3c407506a432b88db186bb784 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b282d6664776037d0a49260bc4d2ad3f = $(`<div id="html_b282d6664776037d0a49260bc4d2ad3f" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Queens<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 222,050,842 kWh<br>                 <b>Total Projects:</b>                 23010<br>                 <b>Avg Storage:</b>                 0.01 kWac             </div></div>`)[0];
+                popup_15e217d3c407506a432b88db186bb784.setContent(html_b282d6664776037d0a49260bc4d2ad3f);
+            
+        
+
+        circle_marker_b10f61712803911cbe6a94e10143f788.bindPopup(popup_15e217d3c407506a432b88db186bb784)
+        ;
+
+        
+    
+    
+            circle_marker_b10f61712803911cbe6a94e10143f788.bindTooltip(
+                `<div>
+                     Queens | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_50498bfd15fa7e9e444d5819523c9b21 = L.circleMarker(
+                [42.7115, -73.5101],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.1444338, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_5a75077c2725227dde7993c9ce0ed54a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3ee7cbb968cb1ac7fe23d1c436dfc772 = $(`<div id="html_3ee7cbb968cb1ac7fe23d1c436dfc772" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Rensselaer<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 115,722,169 kWh<br>                 <b>Total Projects:</b>                 2705<br>                 <b>Avg Storage:</b>                 1.97 kWac             </div></div>`)[0];
+                popup_5a75077c2725227dde7993c9ce0ed54a.setContent(html_3ee7cbb968cb1ac7fe23d1c436dfc772);
+            
+        
+
+        circle_marker_50498bfd15fa7e9e444d5819523c9b21.bindPopup(popup_5a75077c2725227dde7993c9ce0ed54a)
+        ;
+
+        
+    
+    
+            circle_marker_50498bfd15fa7e9e444d5819523c9b21.bindTooltip(
+                `<div>
+                     Rensselaer | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2254e9609e4faea53bf88a4cb1ca4165 = L.circleMarker(
+                [40.5795, -74.1502],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_297780c3506d9c86e794849f296266f3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2e77eefbe6959fd8b0dfdc9365f3b16d = $(`<div id="html_2e77eefbe6959fd8b0dfdc9365f3b16d" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Richmond<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 163,706,911 kWh<br>                 <b>Total Projects:</b>                 12766<br>                 <b>Avg Storage:</b>                 0.00 kWac             </div></div>`)[0];
+                popup_297780c3506d9c86e794849f296266f3.setContent(html_2e77eefbe6959fd8b0dfdc9365f3b16d);
+            
+        
+
+        circle_marker_2254e9609e4faea53bf88a4cb1ca4165.bindPopup(popup_297780c3506d9c86e794849f296266f3)
+        ;
+
+        
+    
+    
+            circle_marker_2254e9609e4faea53bf88a4cb1ca4165.bindTooltip(
+                `<div>
+                     Richmond | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77e6d9682ce6257e4d259c630dbc1e15 = L.circleMarker(
+                [41.1489, -74.0359],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.2991426, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_0e0a0577e1a4e3fdaf4de35377191933 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d9655b0f7ca4f50facb8e8de72016c7a = $(`<div id="html_d9655b0f7ca4f50facb8e8de72016c7a" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Rockland<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 71,495,713 kWh<br>                 <b>Total Projects:</b>                 5267<br>                 <b>Avg Storage:</b>                 0.15 kWac             </div></div>`)[0];
+                popup_0e0a0577e1a4e3fdaf4de35377191933.setContent(html_d9655b0f7ca4f50facb8e8de72016c7a);
+            
+        
+
+        circle_marker_77e6d9682ce6257e4d259c630dbc1e15.bindPopup(popup_0e0a0577e1a4e3fdaf4de35377191933)
+        ;
+
+        
+    
+    
+            circle_marker_77e6d9682ce6257e4d259c630dbc1e15.bindTooltip(
+                `<div>
+                     Rockland | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_48225c64cd59b0a4c2b517f1c524f19c = L.circleMarker(
+                [43.1099, -73.8985],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_a43ed0f20f410469d1cea0f20b83220f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b8df95e643c9b609fdb63a813b163af6 = $(`<div id="html_b8df95e643c9b609fdb63a813b163af6" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Saratoga<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 132,675,386 kWh<br>                 <b>Total Projects:</b>                 2939<br>                 <b>Avg Storage:</b>                 0.18 kWac             </div></div>`)[0];
+                popup_a43ed0f20f410469d1cea0f20b83220f.setContent(html_b8df95e643c9b609fdb63a813b163af6);
+            
+        
+
+        circle_marker_48225c64cd59b0a4c2b517f1c524f19c.bindPopup(popup_a43ed0f20f410469d1cea0f20b83220f)
+        ;
+
+        
+    
+    
+            circle_marker_48225c64cd59b0a4c2b517f1c524f19c.bindTooltip(
+                `<div>
+                     Saratoga | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_65785fe841c12850b0769d474a7a23f5 = L.circleMarker(
+                [42.8142, -74.0776],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.9392752, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_73dd05aa171a51b0c35bc6fbf6468296 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8a96fc938658a19efdf8ce93766bb71e = $(`<div id="html_8a96fc938658a19efdf8ce93766bb71e" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Schenectady<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 114,696,376 kWh<br>                 <b>Total Projects:</b>                 2670<br>                 <b>Avg Storage:</b>                 2.87 kWac             </div></div>`)[0];
+                popup_73dd05aa171a51b0c35bc6fbf6468296.setContent(html_8a96fc938658a19efdf8ce93766bb71e);
+            
+        
+
+        circle_marker_65785fe841c12850b0769d474a7a23f5.bindPopup(popup_73dd05aa171a51b0c35bc6fbf6468296)
+        ;
+
+        
+    
+    
+            circle_marker_65785fe841c12850b0769d474a7a23f5.bindTooltip(
+                `<div>
+                     Schenectady | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f3db334831500ebee83b4e2c9dc2ca6 = L.circleMarker(
+                [42.5936, -74.4307],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_6d01329e3e8eda725c93e4c73de19e9c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_395275a2983d3dcc0dd2781c4c59880a = $(`<div id="html_395275a2983d3dcc0dd2781c4c59880a" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Schoharie<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 9,674,529 kWh<br>                 <b>Total Projects:</b>                 521<br>                 <b>Avg Storage:</b>                 0.24 kWac             </div></div>`)[0];
+                popup_6d01329e3e8eda725c93e4c73de19e9c.setContent(html_395275a2983d3dcc0dd2781c4c59880a);
+            
+        
+
+        circle_marker_5f3db334831500ebee83b4e2c9dc2ca6.bindPopup(popup_6d01329e3e8eda725c93e4c73de19e9c)
+        ;
+
+        
+    
+    
+            circle_marker_5f3db334831500ebee83b4e2c9dc2ca6.bindTooltip(
+                `<div>
+                     Schoharie | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7bbbfc3e173adf7e632ce28f553c6839 = L.circleMarker(
+                [42.3938, -76.8789],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_051b3b9665bdb6e21deb0d52f19bce2b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a7106f19235deeb8e2fa23b4385495d3 = $(`<div id="html_a7106f19235deeb8e2fa23b4385495d3" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Schuyler<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 11,508,061 kWh<br>                 <b>Total Projects:</b>                 133<br>                 <b>Avg Storage:</b>                 0.09 kWac             </div></div>`)[0];
+                popup_051b3b9665bdb6e21deb0d52f19bce2b.setContent(html_a7106f19235deeb8e2fa23b4385495d3);
+            
+        
+
+        circle_marker_7bbbfc3e173adf7e632ce28f553c6839.bindPopup(popup_051b3b9665bdb6e21deb0d52f19bce2b)
+        ;
+
+        
+    
+    
+            circle_marker_7bbbfc3e173adf7e632ce28f553c6839.bindTooltip(
+                `<div>
+                     Schuyler | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18ac37005ce887f6a50a23bf2c3a4606 = L.circleMarker(
+                [42.7837, -76.8283],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_e47258b268e57a0234217b5d0f43e1ee = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f466bc1d92c5898644b4165008fc75ac = $(`<div id="html_f466bc1d92c5898644b4165008fc75ac" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Seneca<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 18,842,971 kWh<br>                 <b>Total Projects:</b>                 169<br>                 <b>Avg Storage:</b>                 0.03 kWac             </div></div>`)[0];
+                popup_e47258b268e57a0234217b5d0f43e1ee.setContent(html_f466bc1d92c5898644b4165008fc75ac);
+            
+        
+
+        circle_marker_18ac37005ce887f6a50a23bf2c3a4606.bindPopup(popup_e47258b268e57a0234217b5d0f43e1ee)
+        ;
+
+        
+    
+    
+            circle_marker_18ac37005ce887f6a50a23bf2c3a4606.bindTooltip(
+                `<div>
+                     Seneca | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd405dffbca0c62775e600c7922f5cf8 = L.circleMarker(
+                [44.5003, -75.1697],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_ab16ed8f17f019b3bc2e6f99e369b107 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_413693d2402a1999e48ea75ea518570a = $(`<div id="html_413693d2402a1999e48ea75ea518570a" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 St Lawrence<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 127,225,952 kWh<br>                 <b>Total Projects:</b>                 677<br>                 <b>Avg Storage:</b>                 0.10 kWac             </div></div>`)[0];
+                popup_ab16ed8f17f019b3bc2e6f99e369b107.setContent(html_413693d2402a1999e48ea75ea518570a);
+            
+        
+
+        circle_marker_bd405dffbca0c62775e600c7922f5cf8.bindPopup(popup_ab16ed8f17f019b3bc2e6f99e369b107)
+        ;
+
+        
+    
+    
+            circle_marker_bd405dffbca0c62775e600c7922f5cf8.bindTooltip(
+                `<div>
+                     St Lawrence | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d873c2ca109a7456d7ec95c1128fbb07 = L.circleMarker(
+                [42.2687, -77.3839],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.4646738, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_67833468f3a40d618a1576ffbd92259a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8e812d6847014fa32f15fd4aa0438593 = $(`<div id="html_8e812d6847014fa32f15fd4aa0438593" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Steuben<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 57,323,369 kWh<br>                 <b>Total Projects:</b>                 235<br>                 <b>Avg Storage:</b>                 0.58 kWac             </div></div>`)[0];
+                popup_67833468f3a40d618a1576ffbd92259a.setContent(html_8e812d6847014fa32f15fd4aa0438593);
+            
+        
+
+        circle_marker_d873c2ca109a7456d7ec95c1128fbb07.bindPopup(popup_67833468f3a40d618a1576ffbd92259a)
+        ;
+
+        
+    
+    
+            circle_marker_d873c2ca109a7456d7ec95c1128fbb07.bindTooltip(
+                `<div>
+                     Steuben | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33d18c3f9214782b951fa9512b5653b1 = L.circleMarker(
+                [40.9849, -72.6151],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_9758ca478ca6af20216d355ddb7faa49 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4b030a068bbba8fc64d91dc2ad093163 = $(`<div id="html_4b030a068bbba8fc64d91dc2ad093163" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Suffolk<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 877,139,679 kWh<br>                 <b>Total Projects:</b>                 51715<br>                 <b>Avg Storage:</b>                 0.16 kWac             </div></div>`)[0];
+                popup_9758ca478ca6af20216d355ddb7faa49.setContent(html_4b030a068bbba8fc64d91dc2ad093163);
+            
+        
+
+        circle_marker_33d18c3f9214782b951fa9512b5653b1.bindPopup(popup_9758ca478ca6af20216d355ddb7faa49)
+        ;
+
+        
+    
+    
+            circle_marker_33d18c3f9214782b951fa9512b5653b1.bindTooltip(
+                `<div>
+                     Suffolk | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_35c864f583000cdd16fa60947107d1b7 = L.circleMarker(
+                [41.7251, -74.7793],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.912709, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_c8834cf355575c4097f8e94c762f864b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_61d6fd33b4aec7d1e10a22be388ea9a9 = $(`<div id="html_61d6fd33b4aec7d1e10a22be388ea9a9" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Sullivan<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 64,563,545 kWh<br>                 <b>Total Projects:</b>                 948<br>                 <b>Avg Storage:</b>                 0.54 kWac             </div></div>`)[0];
+                popup_c8834cf355575c4097f8e94c762f864b.setContent(html_61d6fd33b4aec7d1e10a22be388ea9a9);
+            
+        
+
+        circle_marker_35c864f583000cdd16fa60947107d1b7.bindPopup(popup_c8834cf355575c4097f8e94c762f864b)
+        ;
+
+        
+    
+    
+            circle_marker_35c864f583000cdd16fa60947107d1b7.bindTooltip(
+                `<div>
+                     Sullivan | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f10b97c78ada574449234d34396cfef0 = L.circleMarker(
+                [42.1698, -76.3063],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.9851154, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_385d82d7681876d0f7b8338b2ca98416 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7b605bc526abdb3c29bdcf788bd95daa = $(`<div id="html_7b605bc526abdb3c29bdcf788bd95daa" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Tioga<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 104,925,577 kWh<br>                 <b>Total Projects:</b>                 327<br>                 <b>Avg Storage:</b>                 0.19 kWac             </div></div>`)[0];
+                popup_385d82d7681876d0f7b8338b2ca98416.setContent(html_7b605bc526abdb3c29bdcf788bd95daa);
+            
+        
+
+        circle_marker_f10b97c78ada574449234d34396cfef0.bindPopup(popup_385d82d7681876d0f7b8338b2ca98416)
+        ;
+
+        
+    
+    
+            circle_marker_f10b97c78ada574449234d34396cfef0.bindTooltip(
+                `<div>
+                     Tioga | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_346fd10d9ec037507f5ccfd8f6f60260 = L.circleMarker(
+                [42.4512, -76.4783],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.4465174, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_53c49da74635341c3a5c7e9f9c3fe41f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c9eeb8c65c32fb8c429be63a7a1710cb = $(`<div id="html_c9eeb8c65c32fb8c429be63a7a1710cb" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Tompkins<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 112,232,587 kWh<br>                 <b>Total Projects:</b>                 1673<br>                 <b>Avg Storage:</b>                 1.88 kWac             </div></div>`)[0];
+                popup_53c49da74635341c3a5c7e9f9c3fe41f.setContent(html_c9eeb8c65c32fb8c429be63a7a1710cb);
+            
+        
+
+        circle_marker_346fd10d9ec037507f5ccfd8f6f60260.bindPopup(popup_53c49da74635341c3a5c7e9f9c3fe41f)
+        ;
+
+        
+    
+    
+            circle_marker_346fd10d9ec037507f5ccfd8f6f60260.bindTooltip(
+                `<div>
+                     Tompkins | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d1c31716126a5350b336c584fd02613 = L.circleMarker(
+                [41.8885, -74.2627],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_9e18d2a77073a6735b030df573daffb1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7ddd41d5b24fbfbbaa035e01629b36bf = $(`<div id="html_7ddd41d5b24fbfbbaa035e01629b36bf" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Ulster<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 153,115,367 kWh<br>                 <b>Total Projects:</b>                 5311<br>                 <b>Avg Storage:</b>                 1.47 kWac             </div></div>`)[0];
+                popup_9e18d2a77073a6735b030df573daffb1.setContent(html_7ddd41d5b24fbfbbaa035e01629b36bf);
+            
+        
+
+        circle_marker_2d1c31716126a5350b336c584fd02613.bindPopup(popup_9e18d2a77073a6735b030df573daffb1)
+        ;
+
+        
+    
+    
+            circle_marker_2d1c31716126a5350b336c584fd02613.bindTooltip(
+                `<div>
+                     Ulster | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_435d3a478ee61ef5ca9526d7f164b7c0 = L.circleMarker(
+                [43.5934, -73.8044],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_5d2c6cb28b80f31fe60e6bc58559a6a0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_01a0e4901c1791dedf7e0ba733cf5b95 = $(`<div id="html_01a0e4901c1791dedf7e0ba733cf5b95" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Warren<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 19,371,022 kWh<br>                 <b>Total Projects:</b>                 729<br>                 <b>Avg Storage:</b>                 0.22 kWac             </div></div>`)[0];
+                popup_5d2c6cb28b80f31fe60e6bc58559a6a0.setContent(html_01a0e4901c1791dedf7e0ba733cf5b95);
+            
+        
+
+        circle_marker_435d3a478ee61ef5ca9526d7f164b7c0.bindPopup(popup_5d2c6cb28b80f31fe60e6bc58559a6a0)
+        ;
+
+        
+    
+    
+            circle_marker_435d3a478ee61ef5ca9526d7f164b7c0.bindTooltip(
+                `<div>
+                     Warren | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_515b595243fa85cc3b921d1efceb7552 = L.circleMarker(
+                [43.3114, -73.4309],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.5706118, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_6a416ffc730039bc029b2bc50d00fecd = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8d7b35a951a3f21b951bca89908accc8 = $(`<div id="html_8d7b35a951a3f21b951bca89908accc8" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Washington<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 47,853,059 kWh<br>                 <b>Total Projects:</b>                 804<br>                 <b>Avg Storage:</b>                 0.19 kWac             </div></div>`)[0];
+                popup_6a416ffc730039bc029b2bc50d00fecd.setContent(html_8d7b35a951a3f21b951bca89908accc8);
+            
+        
+
+        circle_marker_515b595243fa85cc3b921d1efceb7552.bindPopup(popup_6a416ffc730039bc029b2bc50d00fecd)
+        ;
+
+        
+    
+    
+            circle_marker_515b595243fa85cc3b921d1efceb7552.bindTooltip(
+                `<div>
+                     Washington | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c99879ef9f33ececbbdc9b0872c742fa = L.circleMarker(
+                [43.077, -77.1172],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.062309, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_e25cbd732684f4f39520442deb0d30f0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_bbe864223e95e4f1393e36b29247eb1c = $(`<div id="html_bbe864223e95e4f1393e36b29247eb1c" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Wayne<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 60,311,545 kWh<br>                 <b>Total Projects:</b>                 525<br>                 <b>Avg Storage:</b>                 0.11 kWac             </div></div>`)[0];
+                popup_e25cbd732684f4f39520442deb0d30f0.setContent(html_bbe864223e95e4f1393e36b29247eb1c);
+            
+        
+
+        circle_marker_c99879ef9f33ececbbdc9b0872c742fa.bindPopup(popup_e25cbd732684f4f39520442deb0d30f0)
+        ;
+
+        
+    
+    
+            circle_marker_c99879ef9f33ececbbdc9b0872c742fa.bindTooltip(
+                `<div>
+                     Wayne | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2545436343db1e4104e244d8e1d9853 = L.circleMarker(
+                [41.122, -73.7949],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_88f2f5a94f2eda724cc75f00b4f60587 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9aa83c6593263cdf61658195877253eb = $(`<div id="html_9aa83c6593263cdf61658195877253eb" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Westchester<br>                 <b>Zone:</b> High Production Zone<br>                 <b>Total Energy:</b>                 230,581,827 kWh<br>                 <b>Total Projects:</b>                 12345<br>                 <b>Avg Storage:</b>                 0.90 kWac             </div></div>`)[0];
+                popup_88f2f5a94f2eda724cc75f00b4f60587.setContent(html_9aa83c6593263cdf61658195877253eb);
+            
+        
+
+        circle_marker_b2545436343db1e4104e244d8e1d9853.bindPopup(popup_88f2f5a94f2eda724cc75f00b4f60587)
+        ;
+
+        
+    
+    
+            circle_marker_b2545436343db1e4104e244d8e1d9853.bindTooltip(
+                `<div>
+                     Westchester | High Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9bb57c4d18d47a90dc8dc6a36d4ab1d2 = L.circleMarker(
+                [42.7145, -78.2346],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.6705552, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_8432d59cbf39f083e55590ddb0b1e66d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_67b7fc1e595b1130fa25a54cd848daa5 = $(`<div id="html_67b7fc1e595b1130fa25a54cd848daa5" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Wyoming<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 33,352,776 kWh<br>                 <b>Total Projects:</b>                 191<br>                 <b>Avg Storage:</b>                 0.10 kWac             </div></div>`)[0];
+                popup_8432d59cbf39f083e55590ddb0b1e66d.setContent(html_67b7fc1e595b1130fa25a54cd848daa5);
+            
+        
+
+        circle_marker_9bb57c4d18d47a90dc8dc6a36d4ab1d2.bindPopup(popup_8432d59cbf39f083e55590ddb0b1e66d)
+        ;
+
+        
+    
+    
+            circle_marker_9bb57c4d18d47a90dc8dc6a36d4ab1d2.bindTooltip(
+                `<div>
+                     Wyoming | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7d93d94353454066c8e9766ebbe0faa4 = L.circleMarker(
+                [42.6312, -77.1105],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.783305, "stroke": true, "weight": 1.5}
+            ).addTo(map_96891aface08f355e33ba45ccf3bb30b);
+        
+    
+        var popup_33651c1a5ad66518ec25170a80963363 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2b930e578d0b8273415e4e6fe6447b27 = $(`<div id="html_2b930e578d0b8273415e4e6fe6447b27" style="width: 100.0%; height: 100.0%;"><div style='font-family:Arial;                 font-size:12px;                 width:240px;'>                 <b>County:</b>                 Yates<br>                 <b>Zone:</b> Low Production Zone<br>                 <b>Total Energy:</b>                 48,916,525 kWh<br>                 <b>Total Projects:</b>                 194<br>                 <b>Avg Storage:</b>                 0.59 kWac             </div></div>`)[0];
+                popup_33651c1a5ad66518ec25170a80963363.setContent(html_2b930e578d0b8273415e4e6fe6447b27);
+            
+        
+
+        circle_marker_7d93d94353454066c8e9766ebbe0faa4.bindPopup(popup_33651c1a5ad66518ec25170a80963363)
+        ;
+
+        
+    
+    
+            circle_marker_7d93d94353454066c8e9766ebbe0faa4.bindTooltip(
+                `<div>
+                     Yates | Low Production Zone
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
